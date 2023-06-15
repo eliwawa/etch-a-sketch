@@ -8,8 +8,10 @@ function generateGrid(numPixels) {
             pixel.setAttribute('col', `${j}`);
             pixel.setAttribute('row', `${i}`)
             pixel.classList.add('pixel');
+            pixel.addEventListener("mouseover", (event) => {
+                event.target.style.backgroundColor = 'black';
+            })
             pixel.style.width = `${(100/numPixels)}%`;
-            pixel.textContent = `${j}, ${i}`;
         }
     }
 }
